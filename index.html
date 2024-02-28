@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en"> <!--lang is Declared in html and assist in search engines and browser-->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="James Mbere">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <title>Personal Portfolio Website</title>
+        <link rel="stylesheet" href="style.css" />
+        <script type="text/JavaScript" src = "script.js" defer>    
+        </script>
+        <script src="https://kit.fontawesome.com/f26619c884.js" crossorigin="anonymous"></script>
+    </head>
+        <div id = "header">
+            <div class = "container">
+                <nav>
+                    <img src = "logo5.png" class = "logo" />
+                    <ul id = "sidemenu">
+                        <li><a href = "#header">Home</a></li>
+                        <li><a href = "#about">About</a></li>
+                        <li><a href = "#services">Services</a></li>
+                        <li><a href = "#porfolio">Portfolio</a></li>
+                        <li><a href = "#contact">Contact</a></li>
+                        <i class="fas fa-times" onclick = "closemenu()"></i>
+                    </ul>
+                    <i class="fas fa-bars" onclick = "openmenu()"></i>
+                </nav>
+                <div class = "header-text">
+                    <p>Software Developer</p>
+                    <h1>Hi, I am <span>James</span><br>Mbere from Kenya</h1>
+                </div>
+            </div>
+        </div>
+        <div id = "about">
+            <div class = "container">
+                <div class = "row">
+                    <div class = "about-col-1">
+                        <img src = "jamesmn1.png" >
+                    </div>
+                    <div class = "about-col-2">
+                        <h1 class = "sub-title">About me</h1>
+                        <p>I am a Software Developer from Nairobi, Kenya.Strong in design and problem-solving skills. Proficient in HTML, CSS, JAVASCRIPT, REACT, NodeJS/ExpressJS  PYTHON, and GIT & GITHUB. . Passionate about implementing and launching new projects and have the ability to translate business requirements into technical solutions.</p>
+                        <div class = "tab-titles">
+                            <p class = "tab-links active-link" onclick = "opentab('skills')">Skills</p>
+                            <p class = "tab-links" onclick = "opentab('experience')">Experience</p>
+                            <p class = "tab-links" onclick = "opentab('education')">Education</p>
+                        </div>
+                        <div class = "tab-contents active-tab" id = "skills">
+                            <ul>
+                                <li><span>Software development</span><br>Developing softwares and applications.</li>
+                                <li><span>Web Development</span><br>Web app Development</li>
+                                <li><span>3D & 2D Artificial Intelligence (AI) Instructor</span><br>Train and Annotate 3D and 2D AI projects.</li>
+                            </ul>
+                        </div>
+                        <div class = "tab-contents" id = "experience">
+                            <ul>
+                                <li><span>2022 - current</span><br>Software Development at ALX.</li>
+                                <li><span>2020 - 2022</span><br>Team lead at Remotasks AI Kenya.</li>
+                                <li><span>2017 - 2017</span><br>Intern at Kenya Medical Research Institute (KEMRI).</li>
+                            </ul>
+                        </div>
+                        <div class = "tab-contents" id = "education">
+                            <ul>
+                                <li><span>2022 - current</span><br>ALX software engineering program.</li>
+                                <li><span>2014 - 2018</span><br>University of Nairobi, Chiromo campus.</li>
+                                <li><span>2010 - 2013</span><br>O level education.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ----services------->
+        <div id = "services">
+            <div class = "container">
+                <h1 class = "sub-title">My Services</h1>
+                <div class = "services-list">
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>Web Design</h2>
+                        <p>I create websites and web applications based on client requirements. writing code, updating websites, designing layouts, editing website content, and making adjustments based on client feedback.</p>
+                        <a href = "#">Learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-crop-simple"></i>
+                        <h2>3D & 2D AI Instructor</h2>
+                        <p>I help train and guide on 3D and 2D AI polygon annotation based projects. With my reliable team of 15 to 20 experienced individuals, we deliver the output and quality based on the client requirement/instructions without delay.
+                        </p>
+                        <a href = "#">Learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-app-store"></i>
+                        <h2>App Design</h2>
+                        <p>I design  user experience (UX) and user interface (UI) elements. Define solutions, create the app's flow and structure, and make stylistic choices from colors to fonts. Design is  based on client  choice and need.</p>
+                        <a href = "#">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ------portfolio----- -->
+        <div id = "porfolio">
+            <div class = "container">
+                <h1 class = "sub-title">My Work</h1>
+                <div class = "work-list">
+                    <div class = "work">
+                        <img src = "admin_dashboard (2).jpg">
+                        <div class = "layer">
+                            <h3>Admin-dashboard App</h3>
+                            <p>The admin dashboard allows at-a-glance access to the crucial information for the specific needs of a particular professional or a team.
+                            </p>
+                            <a href = "https://metanextechrx.netlify.app/" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class = "work">
+                        <img src = "meme.jpg">
+                        <div class = "layer">
+                            <h3>Meme-generator App</h3>
+                            <p>The meme-generator app, allows you to add top-text,bottom-text,choose
+                                image of your choice and download your meme.
+                            </p>
+                            <a href = "https://mnrx2020.github.io/meme_laugh/" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class = "work">
+                        <img src = "tenzi.jpg">
+                        <div class = "layer">
+                            <h3>Tenzies App</h3>
+                            <p>The app allows first player to get all ten of your dice to show the same number.The winner shouts "Tenzi and wins the game!"
+                            </p>
+                            <a href = "https://metanextechrx-tenzies.netlify.app/" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <a href = "#" class = "btn">See More</a>
+            </div>
+        </div>
+        <!--  ------Contact----- -->
+        <div id = "contact">
+            <div class = "container">
+                <div class = "row">
+                    <div class = "contact-left">
+                        <h1 class = "sub-title">Contact me</h1>
+                        <p><i class="fa-solid fa-paper-plane"></i> jamesmbere@gmail.com</p>
+                        <p><i class="fa-solid fa-phone"></i> 0714476983</p>
+                        <div class = "social-icons">
+                            <a href="https://www.facebook.com/james.nyumbah" target="_blank">
+                            <i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://twitter.com/jamesmbere01" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
+                            <a href="https://www.instagram.com/jamesjerry96/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/james-mbere-3914ab13b/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/mnrx2020" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                        <a href = "my-cv2.pdf" download class = "btn btn2">Download CV</a>
+                    </div>
+                    <div class = "contact-right">
+                        <form name = "submit-to-google-sheet">
+                            <input type = "text" name = "Name" placeholder = "Your Name" required>
+                            <input type = "email" name = "Email" placeholder = "Your Email" required>
+                            <textarea name = "Message" rows = "6" placeholder = "Your Message"></textarea>
+                            <button type = "submit" class = "btn btn2">Submit</button>
+                        </form>
+                        <span id = "msg"></span>
+                    </div>
+                </div>
+            </div>
+            <div class = "copyright">
+                <p>Copyright @ James Mbere</p>
+            </div>
+        </div>
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            function  opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab")
+            }
+        </script>
+        <script>
+            var sidemeu = document.getElementById("sidemenu");
+            function openmenu(){
+                sidemeu.style.right = "0"
+            }
+            function closemenu(){
+                sidemeu.style.right = "-200px"
+            }
+        </script>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxmeHeBXnY_ACfTqEkjiNh-bKjym2CK7C-S5qQ0cO4_kVdF9QyMPQkMsmGagpLe6dIUzg/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg = document.getElementById("msg")
+         
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully"
+                    setTimeout(function(){
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+    </body>
+</html>
