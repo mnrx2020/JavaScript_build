@@ -49,14 +49,17 @@ form.addEventListener('submit', async (e) => {
 });
 
 // "See More" button functionality
-window.onload = function() {
-    document.getElementById("see-more-btn").addEventListener("click", function() {
+    window.onload = function() {
+        document.getElementById("see-more-btn").addEventListener("click", toggleAdditionalWorks);
+    };
+
+    function toggleAdditionalWorks() {
         const allAdditionalWorks = document.querySelectorAll(".work:nth-child(n+4)");
         allAdditionalWorks.forEach(function(work) {
             work.classList.toggle("hidden");
         });
         this.textContent = this.textContent === "See More" ? "See Less" : "See More";
-    });
-};
+    }
+
 
 
