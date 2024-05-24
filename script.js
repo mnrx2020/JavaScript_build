@@ -49,17 +49,23 @@ form.addEventListener('submit', async (e) => {
 });
 
 // "See More" button functionality
-    window.onload = function() {
-        document.getElementById("see-more-btn").addEventListener("click", toggleAdditionalWorks);
-    };
+// Wait for the DOM content to be fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    // Attach click event listener to the document
+    document.addEventListener("click", function(event) {
+        // Check if the clicked element is the "See More" button
+        if (event.target && event.target.id === "see-more-btn") {
+            // Toggle visibility of additional works
+            const allAdditionalWorks = document.querySelectorAll(".work:nth-child(n+4)");
+            allAdditionalWorks.forEach(function(work) {
+                work.classList.toggle("hidden");
+            });
+            // Update button text
+            event.target.textContent = event.target.textContent === "See More" ? "See Less" : "See More";
+        }
+    });
+});
 
-    function toggleAdditionalWorks() {
-        const allAdditionalWorks = document.querySelectorAll(".work:nth-child(n+4)");
-        allAdditionalWorks.forEach(function(work) {
-            work.classList.toggle("hidden");
-        });
-        this.textContent = this.textContent === "See More" ? "See Less" : "See More";
-    }
 
 
 
