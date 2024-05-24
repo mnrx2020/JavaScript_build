@@ -52,7 +52,7 @@ form.addEventListener('submit', async (e) => {
     // Wait for the DOM content to be fully loaded
     document.addEventListener("DOMContentLoaded", function() {
         // Select the "See More" button
-        const seeMoreBtn = document.getElementById("see-more-btn");
+        const seeMoreBtn = document.getElementById("#see-more-btn");
 
         // Attach click event listener to the "See More" button
         seeMoreBtn.addEventListener("click", function() {
