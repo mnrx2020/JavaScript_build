@@ -1013,4 +1013,8 @@ nav .fas{
     display: block;
 }
 
+.hidden{
+    display: none;
+}
+
 
