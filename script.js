@@ -49,22 +49,24 @@ form.addEventListener('submit', async (e) => {
 });
 
 // "See More" button functionality
-// Wait for the DOM content to be fully loaded
-document.addEventListener("DOMContentLoaded", function() {
-    // Attach click event listener to the document
-    document.addEventListener("click", function(event) {
-        // Check if the clicked element is the "See More" button
-        if (event.target && event.target.id === "see-more-btn") {
-            // Toggle visibility of additional works
-            const allAdditionalWorks = document.querySelectorAll(".work:nth-child(n+4)");
-            allAdditionalWorks.forEach(function(work) {
+    // Wait for the DOM content to be fully loaded
+    document.addEventListener("DOMContentLoaded", function() {
+        // Select the "See More" button
+        const seeMoreBtn = document.getElementById("see-more-btn");
+
+        // Attach click event listener to the "See More" button
+        seeMoreBtn.addEventListener("click", function() {
+            // Select all additional work containers
+            const additionalWorks = document.querySelectorAll(".work.hidden");
+            // Toggle the "hidden" class for additional work containers
+            additionalWorks.forEach(function(work) {
                 work.classList.toggle("hidden");
             });
-            // Update button text
-            event.target.textContent = event.target.textContent === "See More" ? "See Less" : "See More";
-        }
+            // Change the button text based on its current text content
+            seeMoreBtn.textContent = seeMoreBtn.textContent === "See More" ? "See Less" : "See More";
+        });
     });
-});
+
 
 
 
