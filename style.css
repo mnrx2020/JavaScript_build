@@ -471,12 +471,14 @@ nav ul li a:hover::after{
 #portfolio{
     padding: 50px 0;
 }
+
 .work-list{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
     grid-gap: 40px;
     margin-top: 50px;
 }
+
 .work{
     border-radius: 10px;
     position: relative;
@@ -493,56 +495,59 @@ nav ul li a:hover::after{
     border: 4px solid transparent;
     width: 0;
     height: 0;
-  }
-  .work::before {
+}
+
+.work::before {
     top: 0;
     left: 0;
     border-top-color: #00ccff;
     border-right-color: #d500f9;
     animation: border 2s infinite;
-  }
-  .work::after {
+}
+
+.work::after {
     bottom: 0;
     right: 0;
     animation: border 2s 1s infinite, borderColor 2s 1s infinite;
-  }
-  
-  @keyframes border {
+}
+
+@keyframes border {
     0% {
-      width: 0;
-      height: 0;
+        width: 0;
+        height: 0;
     }
     25% {
-      width: 100%;
-      height: 0;
+        width: 100%;
+        height: 0;
     }
     50% {
-      width: 100%;
-      height: 100%;
+        width: 100%;
+        height: 100%;
     }
     100% {
-      width: 100%;
-      height: 100%;
+        width: 100%;
+        height: 100%;
     }
-  }
-  @keyframes borderColor {
+}
+
+@keyframes borderColor {
     0% {
-      border-bottom-color: #60daaa;
-      border-left-color: #60daaa;
+        border-bottom-color: #60daaa;
+        border-left-color: #60daaa;
     }
     50% {
-      border-bottom-color: #60daaa;
-      border-left-color: #60daaa;
+        border-bottom-color: #60daaa;
+        border-left-color: #60daaa;
     }
     51% {
-      border-bottom-color: transparent;
-      border-left-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
     }
     100% {
-      border-bottom-color: transparent;
-      border-left-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
     }
-  }
+}
 
 .work img{
     width: 100%;
@@ -550,6 +555,7 @@ nav ul li a:hover::after{
     display: block;
     transition: transform 0.5s;
 }
+
 .layer{
     width: 100%;
     height: 0;
@@ -560,20 +566,23 @@ nav ul li a:hover::after{
     bottom: 0;
     overflow: hidden;
     display: flex;
+    flex-direction: column; /* Ensure column layout */
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     padding: 0 40px;
     text-align: center;
     font-size: 14px;
     transition: height 0.5s;
 }
+
 .layer h3{
     font-weight: 500;
     margin-bottom: 20px;
 }
+
 .layer a{
-    margin-top: 20px;
+    /* Remove the top margin if it's not within .project-links */
+    /* margin-top: 20px; */
     color: #ff004f;
     text-decoration: none;
     font-size: 18px;
@@ -583,19 +592,52 @@ nav ul li a:hover::after{
     height: 60px;
     border-radius: 50%;
     text-align: center;
+    display: flex; /* Ensure the icon is centered */
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, transform 0.3s;
 }
+
+.project-links {
+    display: flex;
+    gap: 15px; /* Space between the links */
+    justify-content: center; /* Center the links horizontally */
+    margin-top: 20px; /* Space above the links */
+}
+
+.project-links a {
+    margin-top: 0; /* Remove the top margin */
+    width: 50px; /* Adjust size if needed */
+    height: 50px;
+    background: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.project-links a:hover {
+    background: #ff004f; /* Change background on hover */
+    color: #fff; /* Change icon color on hover */
+    transform: scale(1.1); /* Slightly enlarge the icon */
+}
+
 .work:hover img{
     transform: scale(1.1);
 }
+
 .work:hover .layer{
     height: 100%;
 }
+
 .btn{
     display: block;
     margin: 50px auto;
     width: fit-content;
     padding: 14px 50px;
 }
+
 
 
 
@@ -1006,6 +1048,19 @@ nav .fas{
     }
 }
 
+@media (max-width: 600px) {
+    .project-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .project-links a {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
 
 #msg{
     color: #61b752;
@@ -1016,5 +1071,3 @@ nav .fas{
 .hidden{
     display: none;
 }
-
-
