@@ -968,6 +968,13 @@ nav .fas {
     .home-content {
         order: 1;
     }
+
+    .home-content h1,
+.home-content h3,
+.home-content p {
+    margin-left: 20px;
+}
+
     .home-img {
         position: relative;
         order: 2;
