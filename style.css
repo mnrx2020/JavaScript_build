@@ -66,7 +66,7 @@ body {
 
 .home-content {
     max-width: 500px;
-    margin-left: -30px; /* Will be adjusted in media queries */
+    margin-left: -30px;
 }
 
 .home-content h1 {
@@ -964,21 +964,16 @@ nav .fas {
 @media only screen and (max-width: 800px) {
     .home {
         flex-direction: column;
-        padding: 50px 5% 0; /* Reduce padding for smaller screens */
     }
     .home-content {
         order: 1;
-        margin-left: 0; /* Remove negative margin */
-        padding: 0 20px; /* Add padding for better spacing */
-        max-width: 100%; /* Allow full width */
     }
 
-    /* Remove individual margins */
     .home-content h1,
-    .home-content h3,
-    .home-content p {
-        /* No margin needed here */
-    }
+.home-content h3,
+.home-content p {
+    margin-left: 30px;
+}
 
     .home-img {
         position: relative;
@@ -996,7 +991,7 @@ nav .fas {
     .home-sci {
         position: absolute;
         top: 50%;
-        left: calc(50% - 210px); /* Adjust as needed */
+        left: calc(50% - 210px); /* Adjust this value based on your layout */
         transform: translateY(-50%);
     }
     .home-sci a {
@@ -1085,48 +1080,7 @@ nav .fas {
         padding: 0 20px;
     }
 
-    /* Further adjustments for h1, h3, p */
-    .home-content h1 {
-        font-size: 18px; /* Smaller font size */
-    }
-    .home-content h3 {
-        font-size: 16px;
-    }
-    .home-content p {
-        font-size: 14px;
-        line-height: 1.4; /* Adjust line height for better readability */
-    }
-
-    /* Adjust container padding */
-    .container {
-        padding: 10px 5%; /* Reduce side padding on very small screens */
-    }
-
-    /* Adjust home padding */
-    .home {
-        padding: 50px 5% 0; /* Reduce padding */
-    }
-
-    /* Ensure no overflow */
-    .home-content {
-        padding: 0 15px; /* Further reduce padding for small screens */
-        margin-left: 0; /* Ensure no margin affecting layout */
-    }
-
-    /* Adjust social-icons */
-    .social-icons {
-        flex-wrap: wrap;
-    }
-    .social-icons a {
-        width: 30px;
-        height: 30px;
-        font-size: 16px;
-    }
-
-    /* Final adjustments for better mobile responsiveness */
-    .home-content {
-        padding: 0 10px; /* Even smaller padding */
-    }
+    /* Ensure no other conflicting styles */
 }
 
 /* Additional responsive adjustments */
@@ -1141,12 +1095,6 @@ nav .fas {
     }
 }
 
-/* Final adjustments for better mobile responsiveness */
-@media only screen and (max-width: 600px) {
-    .home-content {
-        padding: 0 10px; /* Even smaller padding */
-    }
-}
 
 #msg{
     color: #61b752;
